@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Canvas Chronicles – Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatImage {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .fade-up {
+      animation: fadeUp 1s ease-out forwards;
+    }
+
+    .float {
+      animation: floatImage 4s ease-in-out infinite;
+      padding: 10px;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-[#fceae8] via-[#f3f1f5] to-[#f5efe7] text-[#3c2f2f] font-serif">
+
+<!-- Header -->
+<header class="flex justify-between items-center p-6 bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-10 border-b border-pink-100">
+    <!-- Logo -->
+    <div class="text-4xl font-bold text-[#5e3c58] tracking-wide">
+      <span class="italic" style="font-family: 'Great Vibes', cursive;">Canvas</span>
+      <span class="ml-1" style="font-family: 'Playfair Display', serif;">Chronicles</span>
+    </div>
+  
+    <!-- Navigation -->
+    <nav class="space-x-6 text-[#5e3c58] font-medium flex items-center">
+      <a href="#" class="hover:text-[#e34a6f] transition">Home</a>
+      <a href="gallery.html"  target="_blank" class="hover:text-[#e34a6f] transition">Gallery</a>
+      <a href="#about" id="#about" class="hover:text-[#e34a6f] transition">About</a>
+      <a href="#contact" class="hover:text-[#e34a6f] transition">
+        <i data-lucide="mail" class="w-5 h-5"></i>
+      </a>
+      
+      <!-- Cart Icon (as part of the navigation) -->
+      <a href="#cart" class="hover:text-[#e34a6f] transition">
+        <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+      </a>
+    </nav>
+  </header>
+  <script>lucide.createIcons();</script>
+  
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1495461199391-8c39f6e50b79?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20"></div>
+    <div class="relative flex flex-col md:flex-row items-center justify-between px-10 py-24 backdrop-blur-sm">
+      <div class="mb-10 md:mb-0 md:w-1/2 fade-up">
+        <h2 class="text-6xl font-extrabold mb-6 leading-tight text-[#3c2f2f] drop-shadow-md">Every Canvas Tells<br>A Story</h2>
+        <p class="text-lg mb-6 text-[#5e3c58]">Explore breathtaking artwork and timeless canvas collections that ignite emotion and imagination.</p>
+        <a href="#featured" class="inline-block bg-[#e34a6f] text-white px-6 py-3 rounded-lg hover:bg-[#c9375a] transition transform hover:scale-105">View Collection</a>
+      </div>
+      <div class="md:w-1/2 float">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR85DLe82Kt2SKZp5JH4KiGYjrOWzbkKV5ZQA&s" alt="Hero Canvas" class="rounded-xl shadow-2xl w-full max-w-md" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Paintings -->
+  <section id="featured" class="py-20 px-10 bg-gradient-to-br from-[#fdf2f8] to-[#fceae8]">
+    <h3 class="text-4xl font-bold text-center mb-12 fade-up">Featured Paintings</h3>
+    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transform transition hover:-translate-y-2 fade-up delay-100">
+        <img src="https://i.pinimg.com/474x/60/a2/61/60a2615e576525ed3ed47497ebb71b62.jpg" class="rounded mb-4" />
+        <h4 class="text-xl font-semibold">Sunset Serenity</h4>
+        <p class="text-[#5e3c58] font-bold mt-2">$250</p>
+        
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transform transition hover:-translate-y-2 fade-up delay-200">
+        <img src="https://i.pinimg.com/736x/22/6d/bf/226dbfcebad41f841682fc8533ba4d4f.jpg" class="rounded mb-4" />
+        <h4 class="text-xl font-semibold">Whispers of Nature</h4>
+        <p class="text-[#5e3c58] font-bold mt-2">$180</p>
+       
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transform transition hover:-translate-y-2 fade-up delay-300">
+        <img src="https://i.pinimg.com/736x/33/ae/d7/33aed759b63ef65d6debf767324b00fe.jpg" class="rounded mb-4" />
+        <h4 class="text-xl font-semibold">Abstract Reflections</h4>
+        <p class="text-[#5e3c58] font-bold mt-2">$320</p>
+        
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-10 bg-[#f9f5f0]">
+    <div class="max-w-3xl mx-auto text-center">
+      <h3 class="text-4xl font-bold mb-6" id="about">About Canvas Chronicles</h3>
+      <p class="text-lg text-[#5e3c58]">Canvas Chronicles is your destination for emotion-driven artwork. Each canvas piece is curated to spark inspiration and add elegance to your space. Let art speak where words fall short.</p>
+    </div>
+  </section>
+
+  <!-- Contact Footer -->
+  <footer id="contact" class="text-center py-10 bg-white border-t border-pink-100">
+    <div class="flex justify-center space-x-6 mb-4">
+      <a href="#"><i data-lucide="instagram" class="w-6 h-6 text-[#5e3c58] hover:text-[#e34a6f] transition"></i></a>
+      <a href="#"><i data-lucide="facebook" class="w-6 h-6 text-[#5e3c58] hover:text-[#e34a6f] transition"></i></a>
+      <a href="#"><i data-lucide="mail" class="w-6 h-6 text-[#5e3c58] hover:text-[#e34a6f] transition"></i></a>
+    </div>
+    <p class="text-sm text-[#5e3c58]">&copy; 2025 Canvas Chronicles. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
