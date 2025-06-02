@@ -327,31 +327,20 @@
       <h1>Shipping Information</h1>
       <form id="orderForm" onsubmit="confirmOrder(event)">
         <label for="fullName">Full Name</label>
-        <input type="text" id="fullName" required>
+        <input type="text" name="fullName" id="fullName" required>
 
         <label for="email">Email Address</label>
-        <input type="email" id="email" required>
+        <input type="email" name="email" id="email" required>
 
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" required>
+        <input type="tel" name="phone" id="phone" required>
 
         <label for="address">Delivery Address</label>
-        <textarea id="address" rows="2" required></textarea>
+        <textarea name="address" id="address" rows="2" required></textarea>
 
         <label for="city">City</label>
-        <input type="text" id="city" required>
+        <input type="text" name="city" id="city" required>
 
-        <label for="state">State/Province</label>
-        <input type="text" id="state" required>
-
-        <label for="zip">Zip/Postal Code</label>
-        <input type="text" id="zip">
-
-        <label for="country">Country</label>
-        <input type="text" id="country" required>
-
-        <label for="instructions">Additional Instructions</label>
-        <textarea id="instructions" rows="2"></textarea>
 
         <button type="submit" class="submit-btn">Confirm Order</button>
       </form>
