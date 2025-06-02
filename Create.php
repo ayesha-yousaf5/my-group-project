@@ -1,3 +1,4 @@
+<?php
 include 'Config.php';
 
 if (isset($_POST['submit'])) {
