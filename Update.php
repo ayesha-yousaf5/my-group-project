@@ -1,3 +1,4 @@
+<?php
 include 'Config.php';
 
 // Get POSTed form data
