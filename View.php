@@ -1,140 +1,93 @@
-<?php
-// view.php
+<?php 
 
-include 'Config.php';
+include "config.php";
 
-// 2. Query all rows from shippinginfo
-$sql    = "SELECT * FROM shippinginfo";
+$sql = "SELECT * FROM shippinginfo ";
+
 $result = $conn->query($sql);
+
 ?>
+
 <!DOCTYPE html>
+
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>View Shipping Info</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            padding: 20px;
-        }
-        h2 {
-            color: #333;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            padding: 12px;
-            border: 1px solid #ccc;
-            text-align: left;
-        }
-        th {
-            background-color: #343a40;
-            color: white;
-        }
-        a {
-            text-decoration: none;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.9em;
-        }
-        .edit-btn {
-            background-color: #ffc107;
-            color: #212529;
-        }
-        .delete-btn {
-            background-color: #dc3545;
-            color: white;
-        }
-    </style>
+
+    <title>View Page</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
 </head>
+
 <body>
-    <h2>📦 All Shipping Orders</h2>
-    <table>
+
+    <div class="container">
+
+        <h2>Shipping Information</h2>
+
+<table class="table">
+
+    <thead>
+
         <tr>
-            <th>ID</th>
-            <th>Full Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>Actions</th>
-        </tr>
 
-        <?php if ($result && $result->num_rows > 0): ?>
-            <?php while ($row = $result->fetch_assoc()): ?>
-                <tr>
-                    <!-- ID: assume it’s named exactly "id" -->
-                    <td>
-                        <?= isset($row['id']) ? intval($row['id']) : '—' ?>
-                    </td>
+        <th>ID</th>
 
-                    <!-- Full Name: try camelCase then lowercase -->
-                    <td>
-                        <?= isset($row['fullName'])
-                                ? htmlspecialchars($row['fullName'])
-                                : (isset($row['fullname'])
-                                    ? htmlspecialchars($row['fullname'])
-                                    : '—') 
-                        ?>
-                    </td>
+        <th>Full Name</th>
 
-                    <!-- Email: try "email" or fallback to lowercase "email" (same) -->
-                    <td>
-                        <?= isset($row['email'])
-                                ? htmlspecialchars($row['email'])
-                                : '—' 
-                        ?>
-                    </td>
+        <th>Email</th>
 
-                    <!-- Phone: try "phone" or fallback "phone" (same) -->
-                    <td>
-                        <?= isset($row['phone'])
-                                ? htmlspecialchars($row['phone'])
-                                : '—' 
-                        ?>
-                    </td>
+        <th>Phone</th>
 
-                    <!-- Address: try "address" -->
-                    <td>
-                        <?= isset($row['address'])
-                                ? nl2br(htmlspecialchars($row['address']))
-                                : '—' 
-                        ?>
-                    </td>
+        <th>Address</th>
 
-                    <!-- City: try "city" -->
-                    <td>
-                        <?= isset($row['city'])
-                                ? htmlspecialchars($row['city'])
-                                : '—' 
-                        ?>
-                    </td>
+        <th>City</th>
 
-                    <td>
-                        <?php if (isset($row['id'])): ?>
-                            <a href="edit.php?id=<?= intval($row['id']) ?>" class="edit-btn">✏️ Edit</a>
-                            <a href="delete.php?id=<?= intval($row['id']) ?>" class="delete-btn"
-                               onclick="return confirm('Are you sure you want to delete this record?')">
-                                ❌ Delete
-                            </a>
-                        <?php else: ?>
-                            —
-                        <?php endif; ?>
-                    </td>
-                </tr>
-            <?php endwhile; ?>
-        <?php else: ?>
-            <tr>
-                <td colspan="7" style="text-align:center;">No records found.</td>
-            </tr>
-        <?php endif; ?>
-    </table>
+    </tr>
+
+    </thead>
+
+    <tbody> 
+
+        <?php
+
+            if ($result->num_rows > 0) {
+
+                while ($row = $result->fetch_assoc()) {
+
+        ?>
+
+                    <tr>
+
+                    <td><?php echo $row['id']; ?></td>
+
+                    <td><?php echo $row['fullName']; ?></td>
+
+                    <td><?php echo $row['email']; ?></td>
+
+                    <td><?php echo $row['phone']; ?></td>
+
+                    <td><?php echo $row['address']; ?></td>
+
+                    <td><?php echo $row['city']; ?></td>
+
+                    <td><a class="btn btn-info" href="update.php?id=<?php echo $row['id']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="delete.php?id=<?php echo $row['id']; ?>">Delete</a></td>
+
+                    </tr>                       
+
+        <?php       }
+
+            }
+
+        ?>                
+
+    </tbody>
+
+</table>
+
+    </div> 
+
 </body>
+
 </html>
-<?php
-$conn->close();
-?>
