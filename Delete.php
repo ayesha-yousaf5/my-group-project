@@ -1,16 +1,25 @@
-<?php
-include 'Config.php';
+<?php 
 
-$id = intval($_GET['id']);
+include "config.php"; 
 
-$sql = "DELETE FROM shippinginfo WHERE id = $id";
+if (isset($_GET['id'])) {
 
-if ($conn->query($sql) === TRUE) {
-    header("Location: view.php");
-    exit();
-} else {
-    echo "Error deleting record: " . $conn->error;
-}
+    $user_id = $_GET['id'];
 
-$conn->close();
+    $sql = "DELETE FROM shippinginfo WHERE id='$user_id'";
+
+     $result = $conn->query($sql);
+
+     if ($result == TRUE) {
+
+        echo " deleted successfully.";
+
+    }else{
+
+        echo "Error:" . $sql . "<br>" . $conn->error;
+
+    }
+
+} 
+
 ?>
