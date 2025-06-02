@@ -1,3 +1,4 @@
+<?php
 include 'Config.php';
 
 // 2. Get the record ID from the URL (ensure it’s an integer)
