@@ -1,6 +1,5 @@
 <?php
 include 'Config.php';
-
 // Get POSTed form data
 $id       = intval($_POST['id']);
 $fullName = $conn->real_escape_string($_POST['fullName']);
