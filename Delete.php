@@ -1,3 +1,4 @@
+<?php
 include 'Config.php';
 
 $id = intval($_GET['id']);
