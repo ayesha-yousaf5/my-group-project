@@ -1,14 +1,4 @@
-include Config.php
-
-<?php
-$servername="localhost";
-$username="root";
-$password="";
-$dbname="mydbb";
-$conn=new mysqli($servername, $username ,$password,$dbname);
-if ($conn->connect_error){
-    die("connection failed:" . $conn->connect_error);
-}
+include 'Config.php';
 
 if (isset($_POST['submit'])) {
   echo 'boomer';
