@@ -8,180 +8,10 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Playfair Display', serif;
-      background: linear-gradient(to bottom right, #fceae8, #f3f1f5, #f5efe7);
-      color: #3c2f2f;
-    }
+  
+    <link rel="stylesheet" href="style.css">
 
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(6px);
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #f9cdd3;
-      z-index: 100;
-    }
 
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #5e3c58;
-      font-weight: 600;
-      font-size: 15px;
-    }
-
-    nav a:hover {
-      color: #e34a6f;
-    }
-
-    h1 {
-      text-align: center;
-      font-family: 'Great Vibes', cursive;
-      font-size: 2em;
-      margin: 50px 0 20px;
-      font-weight: 600;
-    }
-
-    section {
-      padding: 40px;
-      text-align: center;
-    }
-
-    article {
-      display: inline-block;
-      vertical-align: top;
-      width: 300px;
-      margin: 20px;
-      background: white;
-      border-radius: 12px;
-      padding: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    article img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-
-    article h3 {
-      margin: 10px 0 5px;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2em;
-      font-weight: 700;
-    }
-
-    article p {
-      margin: 0;
-      color: #5e3c58;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: white;
-      border-top: 1px solid #f9cdd3;
-    }
-
-    footer a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #5e3c58;
-      font-weight: 500;
-    }
-
-    footer a:hover {
-      color: #e34a6f;
-    }
-
-    footer p {
-      margin-top: 10px;
-      font-size: 0.9em;
-    }
-   button {
-  background-color: darkred;     
-  color: white;              
-  border: none;               
-  border-radius: 10px;        
-  padding: 10px 24px;         
-  font-size: 16px;           
-  cursor: pointer;            
-}
- /* Popup Modal Styles */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 999;
-      justify-content: center;
-      align-items: center;
-    }
-    .form-container {
-      background-color: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      width: 90%;
-      max-width: 500px;
-      max-height: 90vh;
-      overflow-y: auto;
-      position: relative;
-    }
-
-    .form-container h1 {
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-    }
-
-    .form-container label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-
-    .form-container input,
-    .form-container textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 2px solid antiquewhite;
-      border-radius: 10px;
-      background-color: #fff0f6;
-    }
-
-    .submit-btn {
-      background-color: brown;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 30px;
-      font-size: 18px;
-      width: 100%;
-      cursor: pointer;
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 24px;
-      cursor: pointer;
-      color: darkred;
-    }
-
-  </style>
 </head>
 <body>
 
@@ -201,103 +31,105 @@
   <!-- Canvas Art Gallery -->
   <section>
     <!-- Row 1 -->
-    <article><img src="1.jpeg" alt="Canvas 1"><h3>Butterfly Dreams</h3><p>$240
+    <article><img src="./Assets/1.jpeg" alt="Canvas 1"><h3>Butterfly Dreams</h3><p>$240
      <br> <br><button onclick="openForm()">shop now</button><br><br><br>
     </p></article>
-    <article><img src="2.jpeg" alt="Canvas 2"><h3>Wolf Night</h3><p>$500
+    <article><img src="./Assets/2.jpeg" alt="Canvas 2"><h3>Wolf Night</h3><p>$500
       <br><br><button onclick="openForm()">shop now</button><br><br><br><br><br>
     </p></article>
-    <article><img src="3.jpeg" alt="Canvas 3"><h3>White Flora</h3><p>$310
+    <article><img src="./Assets/3.jpeg" alt="Canvas 3"><h3>White Flora</h3><p>$310
       <br> <button onclick="openForm()">shop now</button>
     </p></article>
-    <article><img src="4.jpeg" alt="Canvas 4"><h3>Forest Sky</h3><p>$270
+    <article><img src="./Assets/4.jpeg" alt="Canvas 4"><h3>Forest Sky</h3><p>$270
       <br><br> <button onclick="openForm()">shop now</button><br><br><br><br><br><br><br><br>
     </p></article>
-    <article><img src="5.jpeg" alt="Canvas 5"><h3>Dreamy Sky</h3><p>$230
+    <article><img src="./Assets/5.jpeg" alt="Canvas 5"><h3>Dreamy Sky</h3><p>$230
       <br> <br><button onclick="openForm()">shop now</button><br><br><br><br>
      
     </p></article>
-    <article><img src="6.jpeg" alt="Canvas 6"><h3>Van Gogh</h3><p>$295
+    <article><img src="./Assets/6.jpeg" alt="Canvas 6"><h3>Van Gogh</h3><p>$295
       <br> <br><button onclick="openForm()">shop now</button>
     </p></article>
 
     <!-- Row 2 -->
-    <article><img src="7.jpeg" alt="Canvas 7"><h3>Mini Forest Sky</h3><p>$210
+    <article><img src="./Assets/7.jpeg" alt="Canvas 7"><h3>Mini Forest Sky</h3><p>$210
       <br><br> <button onclick="openForm()">shop now</button><br><br><br><br><br><br><br><br><br>
     </p></article>
-    <article><img src="8.jpeg" alt="Canvas 8"><h3> Dark Floral Clay</h3><p>$260
+    <article><img src="./Assets/8.jpeg" alt="Canvas 8"><h3> Dark Floral Clay</h3><p>$260
       <br><br> <button onclick="openForm()">shop now</button><br><br>
     </p></article>
-    <article><img src="9.jpeg" alt="Canvas 9"><h3>Blue White Flower</h3><p>$225
+    <article><img src="./Assets/9.jpeg" alt="Canvas 9"><h3>Blue White Flower</h3><p>$225
       <br><br> <button onclick="openForm()">shop now</button><br><br><br><br><br><br><br><br><br>
     </p></article>
-    <article><img src="10.jpeg" alt="Canvas 10"><h3>Vase Clay</h3><p>$305
+    <article><img src="./Assets/10.jpeg" alt="Canvas 10"><h3>Vase Clay</h3><p>$305
       <br> <br><button onclick="openForm()">shop now</button><br><br><br><br>
     </p></article>
-    <article><img src="11.jpeg" alt="Canvas 11"><h3>Peach blossom</h3><p>$280
+    <article><img src="./Assets/11.jpeg" alt="Canvas 11"><h3>Peach blossom</h3><p>$280
       <br> <br><button onclick="openForm()">shop now</button><br><br><br>
     </p></article>
-    <article><img src="12.jpeg" alt="Canvas 12"><h3>Wedding Vibes</h3><p>$245
+    <article><img src="./Assets/12.jpeg" alt="Canvas 12"><h3>Wedding Vibes</h3><p>$245
       <br><br> <button onclick="openForm()">shop now</button>
     </p></article>
 
     <!-- Row 3 -->
-    <article><img src="13.jpeg" alt="Canvas 13"><h3>Swirling Dervesh</h3><p>$220
+    <article><img src="./Assets/13.jpeg" alt="Canvas 13"><h3>Swirling Dervesh</h3><p>$220
       <br><br> <button onclick="openForm()">shop now</button><br><br><br><br><br><br>
     </p></article>
-    <article><img src="14.jpeg" alt="Canvas 14"><h3>Custom Names</h3><p>$270
+    <article><img src="./Assets/14.jpeg" alt="Canvas 14"><h3>Custom Names</h3><p>$270
       <br> <br><button onclick="openForm()">shop now</button><br><br>
     </p></article>
-    <article><img src="15.jpeg" alt="Canvas 15"><h3>Arabic Calligraphy</h3><p>$290
+    <article><img src="./Assets/15.jpeg" alt="Canvas 15"><h3>Arabic Calligraphy</h3><p>$290
       <br> <br><button onclick="openForm()">shop now</button>
     </p></article>
-    <article><img src="16.jpeg" alt="Canvas 16"><h3>Purlwhite calligraphy</h3><p>$235
+    <article><img src="./Assets/16.jpeg" alt="Canvas 16"><h3>Purlwhite calligraphy</h3><p>$235
       <br> <br><button onclick="openForm()">shop now</button>
     </p></article>
-    <article><img src="17.jpeg" alt="Canvas 17"><h3>Moonlit beach</h3><p>$260
+    <article><img src="./Assets/17.jpeg" alt="Canvas 17"><h3>Moonlit beach</h3><p>$260
       <br> <br><button onclick="openForm()">shop now</button><br><br><br>
     </p></article>
-    <article><img src="18.jpeg" alt="Canvas 18"><h3>Coming Soon</h3><p>$--
+    <article><img src="./Assets/18.jpeg" alt="Canvas 18"><h3>Coming Soon</h3><p>$--
       
     </p></article>
   </section>
-   <!-- Form Modal -->
+
+
+  
+<!-- Form Modal -->
   <div class="modal" id="popupForm">
     <div class="form-container">
       <span class="close-btn" onclick="closeForm()">×</span>
       <h1>Shipping Information</h1>
-      <form>
-        <label for="fullName">Full Name</label>
-        <input type="text" id="fullName" required>
+
+
+      <form method="POST" action="Create.php">
+
+
+        <label for="fullName" >Full Name</label>
+        <input type="text" id="fullName" name="fullName"  required>
 
         <label for="email">Email Address</label>
-        <input type="email" id="email" required>
+        <input type="email" id="email" name="email" required>
 
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" required>
+        <input type="tel" id="phone"  name="phone"  required>
 
         <label for="address">Delivery Address</label>
-        <textarea id="address" rows="2" required></textarea>
+        <textarea id="address" rows="2" required name="address"></textarea>
 
         <label for="city">City</label>
-        <input type="text" id="city" required>
+        <input type="text" id="city" name="city" required>  
 
-        <label for="state">State/Province</label>
-        <input type="text" id="state" required>
+        
+<button type="submit" class="submit-btn" name="submit" value="submit">Confirm Order</button>
+        
 
-        <label for="zip">Zip/Postal Code</label>
-        <input type="text" id="zip" >
+       
 
-        <label for="country">Country</label>
-        <input type="text" id="country" required>
-
-        <label for="instructions">Additional Instructions</label>
-        <textarea id="instructions" rows="2"></textarea>
-
-        <button type="submit" class="submit-btn">Confirm Order</button>
+        
       </form>
     </div>
   </div>
+   
 
   <!-- Script for Modal -->
   <script>
