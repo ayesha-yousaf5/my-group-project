@@ -1,3 +1,5 @@
+include Config.php
+
 <?php
 $servername="localhost";
 $username="root";
